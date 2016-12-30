@@ -3,13 +3,14 @@ class GroupsController < ApplicationController
   before_action :find_group_and_check_permission, only: [:edit, :update, :destroy]
 
 
-
   def index
     @groups = Group.all
+    @posts = @group.posts
   end
 
   def show
     @group = Group.find(params[:id])
+    @posts = @group.posts
   end
 
  def edit
