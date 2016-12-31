@@ -5,7 +5,6 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.all
-    @posts = @group.posts
   end
 
   def show
